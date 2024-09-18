@@ -13,7 +13,7 @@ const Home = () => {
           nam, deleniti maiores consequuntur corruption.
         </p>
         
-        {/* Wrap buttons in a flex container */}
+        
         <div className="flex flex-col md:flex-row gap-4 mt-5 md:mt-10">
           <button className="text-white py-3 px-6 text-lg md:text-xl bg-[#465697] hover:bg-[#3b4d8b] duration-300 hover:scale-105 font-semibold rounded-full shadow-lg">
             Contact me
