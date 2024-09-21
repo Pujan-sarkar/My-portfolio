@@ -1,10 +1,10 @@
 import React from "react";
-import banner from "../../assets/banner.png";
+import pathway from "../../assets/pathway.png";
 
 const ProjectCard = ({ title, main }) => {
   return(
      <div className="p-3 md:p-6 flex flex-col w-80 bg-[#0c0c19] shadow-xl shadow-slate-900 rounded-2xl">
-        <img className="p-4" src={banner} alt=""></ img>
+        <img className="p-4" src={pathway} alt=""></ img>
         <h3 className="px-4 text-xl md:text-2xl font-bold leading-normal">
             {title}
         </h3>

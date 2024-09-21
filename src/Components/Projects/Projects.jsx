@@ -9,15 +9,15 @@ const Projects = () => {
       {/* Using grid layout for better responsiveness */}
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
         <ProjectCard 
-          title="Find O"
+          title="Pathwway"
           main="Our website is a complete package which gives access to knowledge of all the upcoming Events, Hackathons, Domain Expertise Guide as well as the required Resources for beginners to start coding."
         />
         <ProjectCard 
-          title="Find O"
+          title="Pathway"
           main="Our website is a complete package which gives access to knowledge of all the upcoming Events, Hackathons, Domain Expertise Guide as well as the required Resources for beginners to start coding."
         />
         <ProjectCard 
-          title="Find O"
+          title="Pathway"
           main="Our website is a complete package which gives access to knowledge of all the upcoming Events, Hackathons, Domain Expertise Guide as well as the required Resources for beginners to start coding."
         />
       </div>
