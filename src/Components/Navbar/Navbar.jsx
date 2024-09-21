@@ -11,53 +11,85 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex flex-wrap justify-between md:items-center text-white px-10 pt-6 md:px-20">
-      <span className="text-xl font-bold tracking-wide">Portfolio</span>
-
-      <ul
-        className={`${
-          menu ? "block" : "hidden"
-        }   mx-24 p-y2 mt-4 font-semibold md:mt-5 bg-black px-2 rounded-x1 bg-opacity-30 md:border-none text-center md:bg-transparent md:static md:mx-0 md:flex gap-6`}
-      >
-        <a href="#About">
-          <li className="text-md transition-all duration-300 p-1 md:p-0">
-            About
-          </li>
-        </a>
-        <a href="#Experience">
-          <li className="text-md transition-all duration-300 p-1 md:p-0">
-            Experience
-          </li>
-        </a>
-        <a href="#Projects">
-          <li className="text-md transition-all duration-300 p-1 md:p-0">
-            Projects
-          </li>
-        </a>
-        <a href="#Footer">
-          <li className="text-md transition-all duration-300 p-1 md:p-0">
-            Contact
-          </li>
-        </a>
-      </ul>
-
-      {/* Menu toggle icon */}
+    <nav className="relative z-50">
+      {/* Menu Toggle Icon */}
       {showMenu ? (
         <RiMenu2Line
           size={30}
-          className="md:hidden absolute right-10 top-6 transition-all duration-300"
+          className="absolute right-10 top-6 text-white cursor-pointer md:hidden"
           onClick={handleMenuToggle}
         />
       ) : (
         <RiCloseLine
           size={30}
-          className="md:hidden absolute right-10 top-6 transition-all duration-300"
-          onClick={handleMenuToggle} // Close the menu and show the burger icon again
+          className="absolute right-10 top-6 text-white cursor-pointer md:hidden"
+          onClick={handleMenuToggle}
         />
       )}
+
+      {/* Sidebar Menu */}
+      <div
+        className={`${
+          menu ? "translate-x-0" : "translate-x-full"
+        } fixed top-0 right-0 w-full h-full bg-gray-900 bg-opacity-90 backdrop-blur-xl p-8 transition-transform duration-300 md:hidden`}
+      >
+        {/* Close Button */}
+        <RiCloseLine
+          size={30}
+          className="absolute right-8 top-8 text-white cursor-pointer"
+          onClick={handleMenuToggle}
+        />
+        
+        {/* Menu Logo */}
+        <span className="text-2xl font-bold tracking-wide text-white">
+          Portfolio
+        </span>
+        
+        {/* Menu Items */}
+        <ul className="mt-12 space-y-6 text-center">
+          <li>
+            <a href="#About" className="text-white text-lg hover:text-gray-300">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#Experience" className="text-white text-lg hover:text-gray-300">
+              Experience
+            </a>
+          </li>
+          <li>
+            <a href="#Projects" className="text-white text-lg hover:text-gray-300">
+              Projects
+            </a>
+          </li>
+          <li>
+            <a href="#Footer" className="text-white text-lg hover:text-gray-300">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      {/* Desktop Navbar */}
+      <div className="hidden md:flex justify-between items-center px-10 pt-6 md:px-20 text-white">
+        <span className="text-xl font-bold tracking-wide">Portfolio</span>
+        <ul className="flex space-x-6">
+          <a href="#About">
+            <li className="text-md transition-all duration-300 p-1">About</li>
+          </a>
+          <a href="#Experience">
+            <li className="text-md transition-all duration-300 p-1">Experience</li>
+          </a>
+          <a href="#Projects">
+            <li className="text-md transition-all duration-300 p-1">Projects</li>
+          </a>
+          <a href="#Footer">
+            <li className="text-md transition-all duration-300 p-1">Contact</li>
+          </a>
+        </ul>
+      </div>
     </nav>
   );
 };
 
 export default Navbar;
-
