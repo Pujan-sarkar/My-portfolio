@@ -1,5 +1,8 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
+import pathway from '../../assets/pathway.png'
+import banner from '../../assets/banner.png'
+import fixup from '../../assets/fixup.png'
 
 const Projects = () => {
   return (
@@ -9,16 +12,19 @@ const Projects = () => {
       {/* Using grid layout for better responsiveness */}
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
         <ProjectCard 
-          title="Pathwway"
-          main="Our website is a complete package which gives access to knowledge of all the upcoming Events, Hackathons, Domain Expertise Guide as well as the required Resources for beginners to start coding."
-        />
-        <ProjectCard 
           title="Pathway"
           main="Our website is a complete package which gives access to knowledge of all the upcoming Events, Hackathons, Domain Expertise Guide as well as the required Resources for beginners to start coding."
+          imgSrc={pathway} // Placeholder image or use actual image link
         />
         <ProjectCard 
-          title="Pathway"
+          title="Project X"
           main="Our website is a complete package which gives access to knowledge of all the upcoming Events, Hackathons, Domain Expertise Guide as well as the required Resources for beginners to start coding."
+          imgSrc={banner} // Placeholder image or use actual image link
+        />
+        <ProjectCard 
+          title="Next Big Thing"
+          main="Our website is a complete package which gives access to knowledge of all the upcoming Events, Hackathons, Domain Expertise Guide as well as the required Resources for beginners to start coding."
+          imgSrc={fixup}  // Placeholder image or use actual image link
         />
       </div>
     </div>
